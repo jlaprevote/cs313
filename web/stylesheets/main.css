@@ -1,36 +1,70 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px;
+
+.dark-blue {
+  color: #000080; /* dark blue */
 }
-.jumbotron .btn-primary {
-  background: #845ac7;
-  border-color: #845ac7;
+
+#left-header {
+  text-align: left;
+  float: left;
 }
-.jumbotron .btn-primary:hover {
-  background: #7646c1;
+
+#right-header {
+  text-align: right;
+  float: right;
 }
-.jumbotron p {
-  color: #d9ccee;
-  max-width: 75%;
-  margin: 1em auto 2em;
+
+#center-header {
+  font-family: Verdana;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.jumbotron h1 {
-  font-size: 40px;
+
+#text-body {
+  font-family: Georgia;
 }
-.navbar + .jumbotron {
-  margin-top: -20px;
+
+/* http://www.w3schools.com/css/css_navbar.asp */
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #000000; /* black */
 }
-.jumbotron .lang-logo {
-  display: block;
-  background: #B01302;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  border: 2px solid white;
+
+li a, .dropbtn {
+    display: inline-block;
+    color: #FFFFFF; /* white */
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
 }
-.jumbotron .lang-logo img {
-  max-width: 100%;
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #000080; /* dark blue */
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF; /* white */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: #000000; /* black */
+    padding: 12px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #EBEDEF; /* grey */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
