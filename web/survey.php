@@ -13,6 +13,9 @@
   $result_url = 'survey-results.php';
   if ($_SESSION["voted"] == true) {
     header("Location: " . $result_url);
+    echo '<script language="javascript">';
+    echo 'alert("You have already voted.  Going to results page.")';
+    echo '</script>';
     //exit();
   }
   else {
@@ -60,7 +63,7 @@
     </form>
 
     <br>
-    <a href="survey-results.php">DIRECTLY TO SURVEY RESULTS</a>
+    <a href="survey-results.php">Go Directly To Survey Results</a>
 
 
 </body>

@@ -8,8 +8,8 @@
 
   <h2>Week 03</h2>
     <div id= text-body>
-      <a href="survey.php">PHP SURVEY</a><br>
-      <a href="survey-results.php">PHP SURVEY RESULTS</a>
+      <a href="survey.php">PHP Survey</a><br>
+      <a href="survey-results.php">PHP Survey Results</a>
     </div>
 </body>
 </html>

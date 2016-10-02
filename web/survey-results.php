@@ -10,6 +10,7 @@
 <body>
 <?php
   include 'views/header.php';
+
   if (isset($_POST["gender"])) {
     $_SESSION["voted"] = true;
   }
