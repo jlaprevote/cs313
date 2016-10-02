@@ -11,8 +11,9 @@
               </div>
             </li>
           </ul>
+
           <h2>Web Engineering Projects by: </h2>
-          <h1 class= "dark-blue">Jack Laprevote</h1>
-          <img src="images/profile_photo.jpg" alt="Profile Photo" height="100" width="100">
+            <h1 class= "dark-blue">Jack Laprevote</h1>
+              <img src="images/profile_photo.jpg" alt="Profile Photo" height="100" width="100">
   </header>
       <hr>

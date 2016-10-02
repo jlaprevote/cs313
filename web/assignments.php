@@ -6,7 +6,10 @@
 <body>
   <?php include 'views/header.php'; ?>
 
-  <h1>CS313 - Web Engineering II</h1>
-  <h2>Coming Soon!  The semester just began!</h2>
+  <h2>Week 03</h2>
+    <div id= text-body>
+      <a href="survey.php">PHP SURVEY</a><br>
+      <a href="survey-results.php">PHP SURVEY RESULTS</a>
+    </div>
 </body>
 </html>
