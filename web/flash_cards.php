@@ -49,6 +49,8 @@ catch (PDOException $ex)
 
 ?>
 
+<a href="assignments.php">Back to Assignments Page</a>
+
 </div>
 
 </body>
