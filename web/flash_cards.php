@@ -10,12 +10,23 @@
 <h1>Flash Cards</h1>
 
 <?php
-include 'db.php';
+$dbUrl = getenv('DATABASE_URL');
+
+if (empty($dbUrl)) {
+  $dbUrl = "postgres://postgres:password@localhost:5432/flash_cards";
+}
+$dbopts = parse_url($dbUrl);
+
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPass = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
 
 try
 {
 	// Create the PDO connection
-	$db = new PDO("postgres:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
+	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass);
 
 	// prepare the statement
 	$statement = $db->prepare('SELECT question, answer FROM cards');
@@ -25,7 +36,7 @@ try
 	while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	{
 		echo '<p>';
-		echo '<strong>' . $row['question'] . ' ' . $row['answer'];
+		echo '<strong>' . $row['question'] . '<br>' . $row['answer'];
 		echo '</p>';
 	}
 
