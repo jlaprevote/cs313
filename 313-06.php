@@ -9,14 +9,15 @@
 
 <h1>Scripture Resources</h1>
 <?php
-$dbUser = '313db';
+$dbUser = 'root';
 $dbPass = '';
+$dbPort = '8889'
 $dbName = '313db';
 $dbHost = 'localhost';
 try
 {
 	// Create the PDO connection
-$db = new PDO("mysql:host=$dbHost;dbName=$dbName", $dbUser, $dbPass);
+$db = new PDO("mysql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass);
 } catch (PDOException $e) {
     echo "Error connecting to DB. Details: $ex";
     die();
@@ -71,7 +72,7 @@ foreach($rows as $row) {
 }
 ?>
 <!doctype html>
-    <html>
+<html>
 <head>
     <title></title>
 </head>
@@ -90,4 +91,4 @@ foreach($rows as $row) {
         <p><input type="submit" name="Submit Verse" /></p>
     </form>
 </body>
-    </html>
+</html>
