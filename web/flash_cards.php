@@ -29,7 +29,7 @@ try
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass);
 
 	// prepare the statement
-	$statement = $db->prepare('SELECT question, answer FROM cards');
+	$statement = $db->prepare("SELECT question, answer FROM cards");
 	$statement->execute();
 
 	// Go through each result
@@ -47,7 +47,18 @@ catch (PDOException $ex)
 	die();
 }
 
+$db = null;
 ?>
+
+<html>
+	<body>
+		<form action="insert.php" method="post">
+			Question: <input type="text" name="question" size="40" length="40" value=""><br>
+			Answer: <input type="test" name="answer" size="40" length= "40" value=""><br>
+			<input type="submit" name="submit" value="Submit"><br>
+		</form>
+	</body>
+</html>
 
 <a href="assignments.php">Back to Assignments Page</a>
 
